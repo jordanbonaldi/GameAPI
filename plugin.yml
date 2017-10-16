@@ -1,0 +1,4 @@
+name: GameAPI
+version: 1.0
+main: net.neferett.gameapi.GameAPI
+depend: [BukkitAPI]
