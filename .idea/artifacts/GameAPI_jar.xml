@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GameAPI:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/GameAPI_jar</output-path>
+    <root id="archive" name="GameAPI.jar">
+      <element id="module-output" name="GameAPI" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Linaris-API/lib/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Linaris-API/lib/ProtocolLib.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Linaris-API/target/linaris-gameserver.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

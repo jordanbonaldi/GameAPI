@@ -1,5 +1,6 @@
 package net.neferett.gameapi.commands;
 
+import net.neferett.linaris.api.ranks.RankAPI;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -9,7 +10,6 @@ import org.bukkit.scheduler.BukkitRunnable;
 import net.neferett.gameapi.Game;
 import net.neferett.linaris.BukkitAPI;
 import net.neferett.linaris.api.PlayerData;
-import net.neferett.linaris.api.Rank;
 
 public class GameComand implements CommandExecutor {
 
@@ -32,21 +32,21 @@ public class GameComand implements CommandExecutor {
 
 				final PlayerData pd = BukkitAPI.get().getPlayerDataManager().getPlayerData(p.getName());
 
-				final Rank rank = pd.getPRank();
+				final RankAPI rank = pd.getRank();
 
 				if (rank.getModerationLevel() < 3) {
-					p.sendMessage("§cVous ne pouvez pas utiliser cette commande !");
+					p.sendMessage("ï¿½cVous ne pouvez pas utiliser cette commande !");
 					return;
 				}
 
 				if (args.length == 0) {
-					p.sendMessage("§e/game start");
+					p.sendMessage("ï¿½e/game start");
 					return;
 				}
 
 				if (args.length == 1)
 					if (args[0].equalsIgnoreCase("start")) {
-						p.sendMessage("§aGame Started");
+						p.sendMessage("ï¿½aGame Started");
 						new BukkitRunnable() {
 
 							@Override
